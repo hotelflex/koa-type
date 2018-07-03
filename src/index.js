@@ -1,16 +1,14 @@
 const Boom = require('boom')
-const Policy = require('@hotelflex/policy')
+const Type = require('@hotelflex/type')
 
 module.exports = () => async (ctx, next) => {
   try {
     await next()
   } catch (err) {
-    if (err instanceof Policy.PolicyError) {
-      if (!ctx.request.session.id) {
-        throw Boom.unauthorized()
-      } else {
-        throw Boom.forbidden()
-      }
+    if (err instanceof Type.TypeError) {
+      throw Boom.badRequest()
+    } else if (err instanceof Type.ValidationError) {
+      throw Boom.badData()
     } else {
       throw err
     }
