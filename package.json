@@ -1,12 +1,12 @@
 {
   "name": "@hotelflex/koa-type",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src",
   "scripts": {
     "precommit": "pretty-quick --staged"
   },
   "dependencies": {
-    "@hotelflex/type": "git+ssh://git@github.com/hotelflex/type.git#1.0.0",
+    "@hotelflex/type": "git+https://github.com/hotelflex/type.git#1.0.0",
     "boom": "^7.2.0"
   },
   "devDependencies": {
