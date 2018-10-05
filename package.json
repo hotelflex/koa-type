@@ -1,6 +1,6 @@
 {
   "name": "@hotelflex/koa-type",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src",
   "scripts": {
     "precommit": "pretty-quick --staged"
@@ -20,9 +20,5 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
-  },
-  "engines": {
-    "node": ">=8.0.0 <9.0.0",
-    "npm": ">=4.0.5 <5.0.0"
   }
 }
